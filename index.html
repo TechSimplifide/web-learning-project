@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <summary class="head-container">
+      <h3>Weather App</h3>
+    </summary>
+    <div class="search-bar">
+      <div class="inner-container">
+        <input
+          type="text"
+          name="inputFild"
+          placeholder="Enter city name"
+          id="value"
+        />
+        <!-- <button type="button" id="btn"> -->
+        <i id="btn" class="fa-solid fa-magnifying-glass"></i>
+        <!-- </button> -->
+        <!-- <button id="clear"> -->
+        <i id="clear" class="fa-solid fa-xmark"></i>
+        <!-- </button> -->
+      </div>
+    </div>
+    <div class="error-container">
+      <div class="sub">
+        <p id="error" style="color: red"></p>
+        <img id="cancle" src="./cancel.png" alt="cancel button" />
+      </div>
+    </div>
+    <div class="loader">Loading...</div>
+
+    <div class="container"></div>
+    <script
+      src="https://kit.fontawesome.com/8c28b49402.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
