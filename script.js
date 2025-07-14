@@ -4,7 +4,8 @@ let container = document.querySelector(".container");
 
 btn.addEventListener("click", () => {
   let inputs = document.querySelector("#value").value.trim();
-  if (inputs === "" || inputs != String) {
+  const regex = /^[A-Za-z\s]+$/;
+  if (inputs === "" || !regex.test(inputs) ) {
     let cancelSub = document.querySelector(".sub");
     loader.style.display = "none";
     container.style.padding = "0%";
