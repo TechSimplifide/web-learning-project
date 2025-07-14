@@ -8,22 +8,26 @@ btn.addEventListener("click", () => {
     alert("please enter a pokemon name or id!");
     return;
   }
-  let url = `https://pokeapi.co/api/v2/pokemon/${input}`;
-  fetch(url)
-    .then((response, reject) => {
-      return response.json();
-    })
-    .then((data) => {
+
+  async function fetchPoke(params) {
+    try {
+      const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${input}`
+      );
+      const data = await response.json();
+      console.log(data);
+
       result.innerHTML = `
-    <h3>${data.name.toUpperCase()}</h3>
-    <img src='${data.sprites.front_default}' alt='${data.name}'/>
+     <h3>${data.name.toUpperCase()}</h3>
+     <img src='${data.sprites.front_default}' alt='${data.name}'/>
     `;
       document.querySelector(".text-field").value = "";
-      //   setTimeout(() => {
-      //   result.innerHTML = "";
-      // }, 5000);
-    })
-    .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  fetchPoke();
 });
 
 let popular = document.querySelector(".popular-pokemons");
