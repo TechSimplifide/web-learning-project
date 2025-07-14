@@ -4,7 +4,7 @@ let container = document.querySelector(".container");
 
 btn.addEventListener("click", () => {
   let inputs = document.querySelector("#value").value.trim();
-  if (inputs === "") {
+  if (inputs === "" || inputs != String) {
     let cancelSub = document.querySelector(".sub");
     loader.style.display = "none";
     container.style.padding = "0%";
@@ -15,20 +15,18 @@ btn.addEventListener("click", () => {
     cancelSub.style.border = "0.1em solid rgb(200, 203, 202)";
 
     document.querySelector("#cancle").style.display = "inline-block";
-    document.querySelector("#error").textContent = "⚠️City name cannot be empty!";
+    document.querySelector("#error").textContent = "⚠️City name cannot be empty! or number!";
     return;
   }
   loader.style.display = "block";
   container.style.padding = "3%";
-  let url = `https://api.weatherapi.com/v1/current.json?key=33f7cf3cc1ce40679af130949250205&q=${inputs}&aqi=yes`;
-  fetch(url)
-    .then((response, reject) => {
-      return response.json();
-    })
-    .then((data) => {
-      container.innerHTML = `
+async function fetchWeather() {
+  try {
+  const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=1e3320c56b894b389a091539251407&q=${inputs}&aqi=yes`)
+  const data = await response.json();
+         container.innerHTML = `
             <p class='time'>${data.location.localtime}</p>
-            <div class='location' >
+            <div class='location'>
             <h3><img src='./map.png' alt='map icon'/>${data.location.name}</h3>
             <h4><img src='region.png'>${data.location.region}</h4>
             <p><img src='country.png'>${data.location.country}</p>
@@ -47,8 +45,14 @@ btn.addEventListener("click", () => {
             `;
       loader.style.display = "none";
       inputs.innerText = " ";
-    })
-    .catch((error) => console.log(error));
+  
+
+  } catch (error) {
+    console.log(error);
+    
+  }
+}
+fetchWeather()
 });
 
 let btn1 = document.querySelector("#clear");
