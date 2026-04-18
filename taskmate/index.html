@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="heading">
+        <h2>To Do List</h2>
+      </div>
+      <div class="container-center">
+        <div class="inputfield-button">
+          <input
+            type="text"
+            placeholder="Enter your tasks!!"
+            name="enter"
+            id="textfield"
+          />
+          <button class="add-task">Add</button>
+        </div>
+      </div>
+      <div class="error-container">
+        <div class="error-waper">
+          <p class="error"></p>
+          <img id="cancle" src="./cancel.png" />
+        </div>
+      </div>
+      <div class="center-container">
+        <div id="wap">
+          <ul id="Add"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
