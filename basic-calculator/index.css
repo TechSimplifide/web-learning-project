@@ -1,0 +1,117 @@
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      #container {
+        background-color: #151515aa;
+        height: 70vh;
+        border: 5px solid rgba(0, 0, 0, 0.218);
+        border-radius: 0.9em;
+        margin-top: 6%;
+        width: 90%;
+        max-width: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0px 10px 5px 10px;
+      }
+      #result {
+        height: 11%;
+        width: 95%;
+        font-size: larger;
+        margin-top: 5%;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+      }
+
+      .btn {
+        background-color: rgba(77, 77, 202, 0.72);
+        height: 32px;
+        width: 60px;
+        border: 0;
+        border-radius: 7px;
+        font-size: large;
+        font-weight: 550;
+        box-shadow: 4px 4px 2px rgb(119, 118, 118);
+        margin: 1px;
+      }
+      .btn:hover {
+        background-color: rgba(229, 80, 95, 0.459);
+      }
+      .btny:hover {
+        background-color: rgba(229, 80, 95, 0.459);
+      }
+      .btny {
+        background-color: rgba(77, 77, 202, 0.72);
+        height: 32px;
+        width: 60px;
+        border: 0;
+        border-radius: 7px;
+        font-size: large;
+        box-shadow: 4px 4px 2px rgb(119, 118, 118);
+      }
+      #day {
+        position: relative;
+        top: 2px;
+        height: 16px;
+        width: 30px;
+      }
+
+      @media (max-width: 700px) {
+        #container {
+          background: linear-gradient(
+            rgb(184, 230, 245),
+            rgb(243, 139, 243),
+            rgb(139, 240, 218),
+            rgb(248, 155, 169)
+          );
+          height: 85vh;
+          border: 4px solid rgb(91, 89, 89);
+          margin-top: 4%;
+          width: 95%;
+        }
+        #result {
+          font-size: xx-large;
+          font-weight: 700;
+          color: #545353;
+          border: 0.3px solid black;
+        }
+        .btn {
+          background: linear-gradient(
+            rgb(246, 168, 179),
+            rgb(147, 147, 246),
+            rgb(247, 137, 247)
+          );
+          border: 1px solid black;
+          box-shadow: none;
+          height: 6vh;
+          margin: 0vw 2.13vw;
+          font-weight: 700;
+        }
+        .btny {
+          background: linear-gradient(
+            rgb(246, 168, 179),
+            rgb(147, 147, 246),
+            rgb(247, 137, 247)
+          );
+
+          border: 1px solid black;
+          box-shadow: none;
+          height: 6vh;
+          margin: 0vw 2.13vw;
+        }
+      }
