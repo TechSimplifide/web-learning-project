@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Gusse</title>
+    <link
+      rel="shortcut icon"
+      href="https://miro.medium.com/v2/resize:fit:948/0*bWwTon6cdPRIAN_E"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="heading">Number Guessing playground</p>
+    <div class="input-field-container">
+      <div class="inner">
+        <input
+          type="text"
+          placeholder="A number from 1 to 10"
+          name="input"
+          id="input-field"
+        />
+        <input class="btn" type="button" value="Submit" />
+      </div>
+    </div>
+    <div class="error-container">
+      <div class="sub-container">
+        <p class="error"></p>
+        <img id="cancelBtn" src="./cancel.png" alt="" />
+      </div>
+    </div>
+    <div class="result"></div>
+    <div class="hiddn-img">
+      <img id="reactionImg" src="" alt="img" />
+    </div>
+    <div class="score-rapers">
+      <div class="score">Score :</div>
+    </div>
+    <audio id="correctSound" src="./correctSound.mp3"></audio>
+    <audio id="wrongSound" src="./wrongSound.mp3"></audio>
+    <audio id="invalidSound" src="./invalidSound.mp3"></audio>
+    <audio id="cutSound" src="./cut.mp3"></audio>
+    <script src="index.js"></script>
+  </body>
+</html>
